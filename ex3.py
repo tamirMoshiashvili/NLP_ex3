@@ -13,22 +13,27 @@ def read_dataset_file(filename):
     f = open(filename, 'r')
     file_lines = f.readlines()
     f.close()
+    print 'read the file successfully'
     return file_lines
 
 
 # get a list where each item is a dictionary
 def parse_dataset(filename):
-    file_lines = read_dataset_file(filename)
+    print 'start parsing the file'
     ls = []
+    i = 1
 
-    for line in file_lines:
-        toks = line.split()
-        if len(toks) != 0:  # skip empty lines
-            # create dictionary out of the given line according to the format in https://depparse.uvt.nl/DataFormat.html
-            format_dict = {'id': int(toks[0]), 'form': toks[1], 'lemma': toks[2],
-                           'cpostag': toks[3], 'postag': toks[4], 'feats': toks[5],
-                           'head': toks[6], 'deprel': toks[7], 'phead': toks[8], 'pdeprel': toks[9]}
-            ls.append(format_dict)
+    with open(filename, 'r') as f:
+        for line in f:
+            line = line.split()
+            if len(line) != 0:  # skip empty lines
+                # create dictionary out of the given line,
+                # according to the format in https://depparse.uvt.nl/DataFormat.html
+                ls.append({'id': int(line[0]), 'form': line[1], 'lemma': line[2],
+                        'cpostag': line[3], 'head': line[6]})
+                if i % 600000 == 0:
+                    print i
+                i += 1
     return ls
 
 
@@ -36,7 +41,6 @@ if __name__ == '__main__':
     print 'start'
 
     t = time()
-
     for i, item in enumerate(parse_dataset(sys.argv[1])):
         if i % 8000 == 0:
             print item
