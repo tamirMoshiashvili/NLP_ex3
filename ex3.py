@@ -2,7 +2,8 @@ from time import time
 
 import numpy as np
 import sys
-import SentenceAssociation, VectorBuilder
+from VectorBuilder import VectorBuilder
+from SentenceAssociation import SentenceAssociation
 
 
 def cosine(u, v):
@@ -45,7 +46,8 @@ if __name__ == '__main__':
     #for i, item in enumerate(parse_dataset(sys.argv[1])):
     #    if i % 8000 == 0:
     #        print item
-    associator = SentenceAssociation.SentenceAssociation(sys.argv[1])
-    vectorBuilder = VectorBuilder.VectorBuilder(associator)
-    #print (vectorBuilder.test('primary' ,'motor'))
+    associator = SentenceAssociation(sys.argv[1])
+    associator.test()
+    vectorBuilder = VectorBuilder(associator)
+    print (vectorBuilder.get_vector_for('be'))
     print 'time: ', time() - t
