@@ -54,7 +54,7 @@ class SentenceAssociation:
     def get_target_count(self, target):
         if target in self.word_mapper:
             target = self.word_mapper[target]
-            if target in self.word_counter[target]:
+            if target in self.word_counter:
                 return self.word_counter[target]
         return 0
 
