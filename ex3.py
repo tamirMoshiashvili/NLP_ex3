@@ -51,5 +51,9 @@ if __name__ == '__main__':
     vectorBuilder = VectorBuilder(associator)
 
     vectorBuilder.test_pmi()
-    print (vectorBuilder.get_vector_for('be'))
+    print "start to build all vectors"
+    vectorBuilder.build_all_vectors()
+    print ('vectors build done!')
+    print (vectorBuilder.cosine(associator.get_word_id('dog'),associator.get_word_id('cat')))
+    print (vectorBuilder.make_vector_for(associator.get_word_id('be')))
     print 'time: ', time() - t

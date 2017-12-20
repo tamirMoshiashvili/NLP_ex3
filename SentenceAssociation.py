@@ -71,6 +71,10 @@ class SentenceAssociation:
         else:
             return False
 
+    def get_all_common_targets_ids(self):
+        commons = self.pair_counts.keys()
+        return commons
+
     def get_word_from_id(self, id):
         return self.word_mapper.keys()[self.word_mapper.values().index(id)]
 
