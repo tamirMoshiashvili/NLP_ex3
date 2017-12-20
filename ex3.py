@@ -49,5 +49,7 @@ if __name__ == '__main__':
     associator = SentenceAssociation(sys.argv[1])
     associator.test()
     vectorBuilder = VectorBuilder(associator)
+
+    vectorBuilder.test_pmi()
     print (vectorBuilder.get_vector_for('be'))
     print 'time: ', time() - t
