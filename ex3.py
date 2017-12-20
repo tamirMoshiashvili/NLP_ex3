@@ -2,6 +2,7 @@ from time import time
 
 import numpy as np
 import sys
+import SentenceAssociation
 
 
 def cosine(u, v):
@@ -41,8 +42,8 @@ if __name__ == '__main__':
     print 'start'
 
     t = time()
-    for i, item in enumerate(parse_dataset(sys.argv[1])):
-        if i % 8000 == 0:
-            print item
-
+    #for i, item in enumerate(parse_dataset(sys.argv[1])):
+    #    if i % 8000 == 0:
+    #        print item
+    associator = SentenceAssociation.SentenceAssociation(sys.argv[1])
     print 'time: ', time() - t
