@@ -32,7 +32,7 @@ def parse_dataset(filename):
                 # create dictionary out of the given line,
                 # according to the format in https://depparse.uvt.nl/DataFormat.html
                 ls.append({'id': int(line[0]), 'form': line[1], 'lemma': line[2],
-                        'cpostag': line[3], 'head': line[6]})
+                           'cpostag': line[3], 'head': line[6]})
                 if i % 600000 == 0:
                     print i
                 i += 1
@@ -43,9 +43,6 @@ if __name__ == '__main__':
     print 'start'
 
     t = time()
-    #for i, item in enumerate(parse_dataset(sys.argv[1])):
-    #    if i % 8000 == 0:
-    #        print item
     associator = SentenceAssociation(sys.argv[1])
     associator.test()
     vectorBuilder = VectorBuilder(associator)
@@ -54,6 +51,6 @@ if __name__ == '__main__':
     print "start to build all vectors"
     vectorBuilder.build_all_vectors()
     print ('vectors build done!')
-    print (vectorBuilder.cosine(associator.get_word_id('dog'),associator.get_word_id('cat')))
+    print (vectorBuilder.cosine(associator.get_word_id('dog'), associator.get_word_id('cat')))
     print (vectorBuilder.make_vector_for(associator.get_word_id('be')))
     print 'time: ', time() - t
