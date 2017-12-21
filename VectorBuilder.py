@@ -38,8 +38,7 @@ class VectorBuilder:
         features2 = set(self.vectors[target_id2].keys())
         intersection = features1.intersection(features2)
         numerator = 0.0
-        right_denominator = 0.0
-        left_denominator = 0.0
+        right_denominator, left_denominator = 0.0, 0.0
         for feature in intersection:
             numerator += float(self.vectors[target_id1][feature]) * self.vectors[target_id2][feature]
             right_denominator += self.vectors[target_id1][feature] ** 2
@@ -52,12 +51,11 @@ class VectorBuilder:
         p_feature = 0.0
         p_pair = 0.0
         for word_id in self.associator.pair_counts.keys():
-            p_target += (self.associator.get_target_count(word_id) * 1.0) / self.associator.get_total_count()
+            p_target += float(self.associator.get_target_count(word_id)) / self.associator.get_total_count()
             for feature_id in self.associator.pair_counts[word_id]:
-                p_pair += (
-                          self.associator.get_pair_count(word_id, feature_id) * 1.0) / self.associator.get_total_count()
+                p_pair += float(self.associator.get_pair_count(word_id, feature_id)) / self.associator.get_total_count()
         for feature_id in self.associator.features_count.keys():
-            p_feature += (self.associator.get_feature_count(feature_id) * 1.0) / self.associator.get_total_count()
+            p_feature += float(self.associator.get_feature_count(feature_id)) / self.associator.get_total_count()
 
         if np.isclose([p_target], [1.0]) and np.isclose([p_feature], [1.0]) and np.isclose([p_pair], [1.0]):
             print ('PMI test Succeeded!')

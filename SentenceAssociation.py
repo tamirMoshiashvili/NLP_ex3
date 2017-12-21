@@ -6,6 +6,17 @@ NUM_FEATURES_FOR_WORDS = 30
 
 class SentenceAssociation:
     def __init__(self, input_file):
+        # class fields:
+        self.total_words = 0  # count of the common words
+        self.word_mapper = dict()  # map word to number (to save memory...)
+        self.targets_count = Counter()  # count each word repeat
+        self.features_count = Counter()  # count each word repeat
+        self.pair_counts = defaultdict(Counter)  # count target word and context word pairs
+
+        self._init_count_data_structures(input_file)
+        self._filter()
+
+    def _init_count_data_structures(self, input_file):
         # Content words are only verbs, nouns, adjectives, adverbs
         context_type = {  # tag from Penn Treebank II tag set
             'VB', 'VBZ', 'VBP', 'VBD', 'VBN', 'VBG', 'WRB',  # verbs
@@ -13,16 +24,8 @@ class SentenceAssociation:
             'PRP', 'PRP$',  # pronoun
             'JJ', 'JJR', 'JJS',  # adjectives
             'RB', 'RBR', 'RBS', 'RP'}  # adverbs
+
         print ('Initializing count data-structure...')
-
-        # class fields:
-        self.total_words = 0  # count of the common words
-        self.word_mapper = dict()  # map word to number (to save memory...)
-        self.targets_count = Counter()  # count each word repeat
-        self.features_count = Counter()  # count each word repeat
-        self.pair_counts = defaultdict(Counter)  # count target word and context word pairs
-        ###
-
         with open(input_file, 'r') as f:
             sentence = set()
             for line in f:
@@ -52,6 +55,8 @@ class SentenceAssociation:
                 sentence.clear()
 
         print ('Counting is done.')
+
+    def _filter(self):
         print ('Start filter uncommon target words.')
 
         for word_id in self.targets_count.keys():
@@ -66,12 +71,6 @@ class SentenceAssociation:
                 self.total_words += self.targets_count[word_id]
 
         print ('Filtering is Done.')
-
-        # TODO - delete this:
-        # common = self.targets_count.most_common(1)
-        # common = common[0][0]
-        # common_word = self.word_mapper.keys()[self.word_mapper.values().index(common)]
-        # print ('common word is ' + str(common_word))
 
     def get_word_id(self, word):
         if word in self.word_mapper:
