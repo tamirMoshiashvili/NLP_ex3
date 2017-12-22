@@ -35,9 +35,11 @@ class VectorBuilder:
         return vector
 
     def build_all_vectors(self):
+        print "start to build all vectors"
         for target_id in self.associator.get_all_common_targets_ids():
             self.vectors[target_id] = self.make_vector_for(target_id)
         self.associator.cleanup()
+        print ('vectors build done!')
 
     def cosine(self, target_id1, target_id2):
         features1 = set(self.vectors[target_id1].keys())
@@ -56,11 +58,11 @@ class VectorBuilder:
         p_target = 0.0
         p_feature = 0.0
         p_pair = 0.0
-        for word_id in self.associator.pair_counts.keys():
+        for word_id in self.associator.get_structure_pair_counts().keys():
             p_target += float(self.associator.get_target_count(word_id)) / self.associator.get_total_count()
-            for feature_id in self.associator.pair_counts[word_id]:
+            for feature_id in self.associator.get_structure_pair_counts()[word_id]:
                 p_pair += float(self.associator.get_pair_count(word_id, feature_id)) / self.associator.get_total_count()
-        for feature_id in self.associator.features_count.keys():
+        for feature_id in self.associator.get_structure_features_count().keys():
             p_feature += float(self.associator.get_feature_count(feature_id)) / self.associator.get_total_count()
 
         if np.isclose([p_target], [1.0]) and np.isclose([p_feature], [1.0]) and np.isclose([p_pair], [1.0]):
@@ -81,7 +83,10 @@ class VectorBuilder:
         for item in as_words:
             print item
 
-    def efficient_algorithm(self, words, result_filename):
+    def find_similarities(self, words, result_filename):
+        """ find top-n similar-words to the given words, writes the results in the file specified """
+
+        print 'applying efficient algorithm'
         t = time()
 
         f = open(result_filename, 'w')
@@ -105,9 +110,8 @@ class VectorBuilder:
 
             top_n = [(self.associator.get_word_from_id(word[0]), word[1]) for word in dt.most_common(TOP_N_SIMILAR)]
             for item in top_n:
-                print item
                 f.write('\t' + item[0] + '\n')
             f.write('\n')
 
         f.close()
-        print 'time to find words:', time() - t
+        print 'time to find words:', time() - t  # should take about 60-sec
