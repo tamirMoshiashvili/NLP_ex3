@@ -1,7 +1,8 @@
 from collections import defaultdict, Counter
+from time import time
 
 THRESHOLD = 100
-NUM_FEATURES_FOR_WORDS = 30
+NUM_FEATURES_FOR_WORDS = 50
 
 
 class SentenceAssociation:
@@ -12,6 +13,7 @@ class SentenceAssociation:
         self.targets_count = Counter()  # count each word repeat
         self.features_count = Counter()  # count each word repeat
         self.pair_counts = defaultdict(Counter)  # count target word and context word pairs
+        self.recovery_filename = 'recovery_file'
 
         self._init_count_data_structures(input_file)
         self._filter()
@@ -59,17 +61,25 @@ class SentenceAssociation:
     def _filter(self):
         print ('Start filter uncommon target words.')
 
+        recovery_file = open(self.recovery_filename, 'w')
+
         for word_id in self.targets_count.keys():
+            recovery_file.write(str(word_id))
             if self.targets_count[word_id] < THRESHOLD and word_id in self.pair_counts:
+                for feature in self.pair_counts[word_id]:
+                    recovery_file.write(' ' + str(feature))
                 del self.pair_counts[word_id]
 
             else:
                 # counting: #(*,att) after filtering
                 for feature in self.pair_counts[word_id]:
+                    recovery_file.write(' ' + str(feature))
                     self.features_count[feature] += self.pair_counts[word_id][feature]
                 # counting #(*,*)
                 self.total_words += self.targets_count[word_id]
+            recovery_file.write('\n')
 
+        recovery_file.close()
         print ('Filtering is Done.')
 
     def get_word_id(self, word):
@@ -113,6 +123,27 @@ class SentenceAssociation:
             return map(lambda x: x[0], self.pair_counts[target_id].most_common(NUM_FEATURES_FOR_WORDS))
         else:
             return {}
+
+    def cleanup(self):
+        """ delete all the memory consumed by this object, besides the word-mapper """
+        del self.total_words
+        del self.targets_count
+        del self.features_count
+        del self.pair_counts
+
+    def recover_file(self):
+        t = time()
+        att_to_word = dict()
+        with open(self.recovery_filename, 'r') as f:
+            for line in f:
+                splitted = line.split()
+                att_to_word[int(splitted[0])] = [int(item) for item in splitted[1:]]
+            f.close()
+
+        import os
+        os.remove(self.recovery_filename)
+        print 'time for recover-file:', time() - t
+        return att_to_word
 
     def test(self):
         for word_id in self.pair_counts.keys():

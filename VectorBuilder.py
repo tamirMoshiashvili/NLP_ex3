@@ -1,4 +1,9 @@
+from collections import Counter
+from time import time
+
 import numpy as np
+
+TOP_N_SIMILAR = 20
 
 
 class VectorBuilder:
@@ -32,6 +37,7 @@ class VectorBuilder:
     def build_all_vectors(self):
         for target_id in self.associator.get_all_common_targets_ids():
             self.vectors[target_id] = self.make_vector_for(target_id)
+        self.associator.cleanup()
 
     def cosine(self, target_id1, target_id2):
         features1 = set(self.vectors[target_id1].keys())
@@ -64,3 +70,44 @@ class VectorBuilder:
             print ('Ptarget:' + str(p_target))
             print ('Pfeature:' + str(p_feature))
             print ('Ppair:' + str(p_pair))
+
+    def calc_sim(self, word):
+        word_id = self.associator.get_word_id(word)
+        sim_vec = Counter()
+        for v_id in self.vectors:
+            sim_vec[v_id] = self.cosine(word_id, v_id)
+        sim_vec = sim_vec.most_common(20)
+        as_words = [(self.associator.get_word_from_id(vec_id[0]), vec_id[1]) for vec_id in sim_vec]
+        for item in as_words:
+            print item
+
+    def efficient_algorithm(self, words, result_filename):
+        t = time()
+
+        f = open(result_filename, 'w')
+        att_to_words = self.associator.recover_file()
+
+        for u in words:
+            f.write(u + ':\n')
+            u = self.associator.get_word_id(u)
+            dt = Counter()  # word-v to score, actually similarity-of-u-and-v
+
+            u_vec = self.vectors[u]
+            for att in u_vec:
+                one = u_vec[att]
+                for v in att_to_words[att]:
+                    if v not in self.vectors or u == v:
+                        continue
+                    two = 0
+                    if att in self.vectors[v]:
+                        two = self.vectors[v][att]
+                    dt[v] += one * two
+
+            top_n = [(self.associator.get_word_from_id(word[0]), word[1]) for word in dt.most_common(TOP_N_SIMILAR)]
+            for item in top_n:
+                print item
+                f.write('\t' + item[0] + '\n')
+            f.write('\n')
+
+        f.close()
+        print 'time to find words:', time() - t
