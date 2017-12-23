@@ -7,8 +7,11 @@ NUM_FEATURES_FOR_WORDS = 50
 class Association:
     """ holds association-strategy and performs generic functions on it """
 
-    def __init__(self, assoc_strategy, input_filename):
-        self.strategy = assoc_strategy()
+    def __init__(self, assoc_strategy, input_filename, arg=None):
+        if arg is None:
+            self.strategy = assoc_strategy()
+        else:
+            self.strategy = assoc_strategy(arg)
 
         # Content words are only verbs, nouns, adjectives, adverbs
         context_type = {  # tag from Penn Treebank II tag set
@@ -122,7 +125,7 @@ class Association:
         for word_id in strategy.pair_counts.keys():
             if len(list(strategy.pair_counts[word_id].elements())) != strategy.targets_count[word_id]:
                 print ('---')
-                print (strategy.get_word_from_id(word_id))
+                print (self.get_word_from_id(word_id))
                 print (strategy.pair_counts[word_id])
                 print (len(list(strategy.pair_counts[word_id].elements())))
                 print (strategy.targets_count[word_id])
