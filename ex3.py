@@ -29,13 +29,18 @@ def main_part2(filename):
 
 def main_part3(filename):
     associator = Association(DependencyEdgeAssocaition,filename)
+    associator.test()
+    vector_builder = VectorBuilder(associator)
+
+    vector_builder.build_all_vectors()
+    vector_builder.find_similarities(TARGET_WORDS, 'result_part3.txt')
 
 if __name__ == '__main__':
     print 'start'
 
     t = time()
 
-    mode = 2
+    mode = 3
     mains = {1: main_part1, 2: main_part2 , 3: main_part3}
     mains[mode](sys.argv[1])
 
