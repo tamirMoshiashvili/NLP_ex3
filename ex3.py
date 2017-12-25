@@ -16,12 +16,12 @@ def make_association_to_part(part_no, filename):
     elif part_no == 2:
         association = Association(WindowAssociationStrategy, filename, arg=2)
     else:
-        association = Association(DependencyEdgeAssocaition,filename)
+        association = Association(DependencyEdgeAssocaition, filename)
     return association
+
 
 if __name__ == '__main__':
     print 'start'
-
     t = time()
 
     part = 3

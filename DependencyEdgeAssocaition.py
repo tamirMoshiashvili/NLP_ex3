@@ -1,6 +1,5 @@
 from collections import Counter, defaultdict
 
-
 HEAD = 0
 WORD = 1
 TAG = 2
