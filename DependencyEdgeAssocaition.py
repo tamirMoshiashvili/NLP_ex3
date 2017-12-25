@@ -1,5 +1,5 @@
 from collections import Counter, defaultdict
-import SentenceNode as Node
+
 
 HEAD = 0
 WORD = 1
@@ -53,14 +53,17 @@ class DependencyEdgeAssocaition:
                 father = sentence[tup[HEAD] - 1]
 
                 prepositions = []
-                try:
-                    father[TAG]
-                except:
-                    print str(tup[WORD]) + "=>" + str(tup[HEAD])
+                if father[HEAD] == -1:
+                    continue
+                right = True
                 while father[TAG] in preposition:
                     prepositions.append(father[WORD])
                     father = sentence[father[HEAD] - 1]
-
+                    if father[HEAD] == -1:
+                        right = False
+                        break
+                if not right:
+                    continue
                 feature = ">" + father[WORD]
 
                 for pre in preposition:

@@ -1,4 +1,5 @@
 from time import time
+from collections import defaultdict
 
 THRESHOLD = 100
 NUM_FEATURES_FOR_WORDS = 50
@@ -28,26 +29,17 @@ class Association:
     def _filter(self):
         print ('Start filter uncommon target words.')
 
-        recovery_file = open(self.recovery_filename, 'w')
-
         strategy = self.strategy
         for word_id in strategy.targets_count.keys():
-            recovery_file.write(str(word_id))
             if strategy.targets_count[word_id] < THRESHOLD and word_id in strategy.pair_counts:
-                for feature in strategy.pair_counts[word_id]:
-                    recovery_file.write(' ' + str(feature))
                 del strategy.pair_counts[word_id]
-
             else:
                 # counting: #(*,att) after filtering
                 for feature in strategy.pair_counts[word_id]:
-                    recovery_file.write(' ' + str(feature))
                     strategy.features_count[feature] += strategy.pair_counts[word_id][feature]
                 # counting #(*,*)
                 strategy.total_words += strategy.targets_count[word_id]
-            recovery_file.write('\n')
 
-        recovery_file.close()
         print ('Filtering is Done.')
 
     def get_word_id(self, word):
@@ -108,11 +100,13 @@ class Association:
 
     def recover_file(self):
         t = time()
-        att_to_word = dict()
+        att_to_word = defaultdict(list)
+
         with open(self.recovery_filename, 'r') as f:
             for line in f:
                 splitted = line.split()
-                att_to_word[int(splitted[0])] = [int(item) for item in splitted[1:]]
+                feature_id = int(splitted[0])
+                att_to_word[feature_id].append(int(splitted[1]))
             f.close()
 
         import os

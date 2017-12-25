@@ -24,11 +24,12 @@ class VectorBuilder:
         else:
             return np.log(numerator / denominator)
 
-    def make_vector_for(self, target_id):
+    def make_vector_for(self, target_id , recovery_file):
         """ :return vector, which is a dictionary mapping feature to pmi-value(target, feature) """
         vector = dict()
         features = self.associator.get_features_for(target_id)
         for feature_id in features:
+            recovery_file.write(str(feature_id)+" "+ str(target_id) +"\n")
             pmi_result = self.calc_PMI(target_id, feature_id)
             if pmi_result > 0:
                 vector[feature_id] = pmi_result
@@ -36,8 +37,10 @@ class VectorBuilder:
 
     def build_all_vectors(self):
         print "start to build all vectors"
+        recovery_file = open(self.associator.recovery_filename, 'w')
         for target_id in self.associator.get_all_common_targets_ids():
-            self.vectors[target_id] = self.make_vector_for(target_id)
+            self.vectors[target_id] = self.make_vector_for(target_id, recovery_file)
+        recovery_file.close()
         self.associator.cleanup()
         print ('vectors build done!')
 
