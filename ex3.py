@@ -5,6 +5,7 @@ from Association import Association
 from SentenceAssociationStrategy import SentenceAssociationStrategy
 from VectorBuilder import VectorBuilder
 from WindowAssociationStrategy import WindowAssociationStrategy
+from DependencyEdgeAssocaition import DependencyEdgeAssocaition
 
 TARGET_WORDS = ['car', 'bus', 'hospital', 'hotel', 'gun', 'bomb', 'horse', 'fox', 'table', 'bowl', 'guitar', 'piano']
 
@@ -26,6 +27,8 @@ def main_part2(filename):
     vector_builder.build_all_vectors()
     vector_builder.find_similarities(TARGET_WORDS, 'result_part2.txt')
 
+def main_part3(filename):
+    associator = Association(DependencyEdgeAssocaition,filename)
 
 if __name__ == '__main__':
     print 'start'
@@ -33,7 +36,7 @@ if __name__ == '__main__':
     t = time()
 
     mode = 2
-    mains = {1: main_part1, 2: main_part2}
+    mains = {1: main_part1, 2: main_part2 , 3: main_part3}
     mains[mode](sys.argv[1])
 
     print 'time: ', time() - t
