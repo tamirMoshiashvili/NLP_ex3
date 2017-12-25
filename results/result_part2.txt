@@ -5,15 +5,15 @@ car:
 	auto
 	motor
 	constructor
+	champ
+	indy
 	endurance
 	fia
 	motorcycle
-	indy
 	truck
-	champ
+	thoroughbred
 	lap
 	nascar
-	thoroughbred
 	driver
 	automobile
 	toyota
@@ -22,10 +22,11 @@ car:
 
 bus:
 	commuter
-	transit
 	intercity
+	transit
 	passenger
 	taxi
+	hourly
 	metro
 	freight
 	streetcar
@@ -37,10 +38,9 @@ bus:
 	mainline
 	ferry
 	subway
-	hourly
 	operator
 	north-south
-	east-west
+	southbound
 
 hospital:
 	clinic
@@ -61,8 +61,8 @@ hospital:
 	medicine
 	surgical
 	eastman
+	orphanage
 	examiner
-	care
 
 hotel:
 	restaurant
@@ -72,6 +72,7 @@ hotel:
 	plaza
 	boutique
 	tavern
+	high-end
 	casino
 	inn
 	supermarket
@@ -84,20 +85,19 @@ hotel:
 	taj
 	chain
 	pub
-	apartment
 
 gun:
 	mortar
 	artillery
 	anti-tank
+	anti-aircraft
 	turret
 	cannon
-	anti-aircraft
 	ammunition
 	tank
 	pistol
-	aft
 	gunner
+	aft
 	muzzle
 	battery
 	armament
@@ -119,23 +119,23 @@ bomb:
 	explosive
 	explosion
 	explode
+	godzilla
 	salamanca
 	ira
 	drone
 	u-boat
 	bomber
 	roadside
+	gunboat
 	suitcase
 	ltte
-	submarine
-	atom
 
 horse:
 	horseback
+	filly
 	thoroughbred
 	jockey
 	cyclist
-	filly
 	racehorse
 	racing
 	camel
@@ -149,8 +149,8 @@ horse:
 	bike
 	goat
 	breed
+	off-road
 	artillery
-	sheep
 
 fox:
 	cbs
@@ -177,6 +177,7 @@ fox:
 table:
 	playground
 	skiing
+	softball
 	badminton
 	gymnastics
 	restroom
@@ -185,6 +186,7 @@ table:
 	grill
 	hurling
 	biking
+	brasileiro
 	volleyball
 	pavilion
 	handball
@@ -192,19 +194,18 @@ table:
 	pool
 	lacrosse
 	amenity
-	lookout
-	bottom
-	dart
+	wta
 
 bowl:
 	batsman
 	right-handed
-	bowler
 	bcs
+	bowler
 	left-handed
 	hitter
 	super
 	pitcher
+	postseason
 	wbc
 	heterosexual
 	league
@@ -216,7 +217,6 @@ bowl:
 	boise
 	quiz
 	wba
-	postseason
 
 guitar:
 	acoustic
@@ -242,22 +242,23 @@ guitar:
 
 piano:
 	violin
-	oboe
 	cello
+	oboe
 	flute
+	viola
 	sonata
 	concerto
-	viola
 	clarinet
 	trumpet
 	saxophone
 	soloist
 	beethoven
+	trombone
 	guitar
 	soprano
 	recital
 	harp
-	trombone
 	mozart
 	handel
 	orchestra
+

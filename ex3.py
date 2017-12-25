@@ -10,38 +10,29 @@ from DependencyEdgeAssocaition import DependencyEdgeAssocaition
 TARGET_WORDS = ['car', 'bus', 'hospital', 'hotel', 'gun', 'bomb', 'horse', 'fox', 'table', 'bowl', 'guitar', 'piano']
 
 
-def main_part1(filename):
-    associator = Association(SentenceAssociationStrategy, filename)
-    associator.test()
-    vector_builder = VectorBuilder(associator)
-    vector_builder.test_pmi()
-    vector_builder.build_all_vectors()
-    vector_builder.find_similarities(TARGET_WORDS, 'result_part1.txt')
-
-
-def main_part2(filename):
-    associator = Association(WindowAssociationStrategy, filename, arg=2)
-    associator.test()
-    vector_builder = VectorBuilder(associator)
-    vector_builder.test_pmi()
-    vector_builder.build_all_vectors()
-    vector_builder.find_similarities(TARGET_WORDS, 'result_part2.txt')
-
-def main_part3(filename):
-    associator = Association(DependencyEdgeAssocaition,filename)
-    associator.test()
-    vector_builder = VectorBuilder(associator)
-    vector_builder.test_pmi()
-    vector_builder.build_all_vectors()
-    vector_builder.find_similarities(TARGET_WORDS, 'result_part3.txt')
+def make_association_to_part(part_no, filename):
+    if part_no == 1:
+        association = Association(SentenceAssociationStrategy, filename)
+    elif part_no == 2:
+        association = Association(WindowAssociationStrategy, filename, arg=2)
+    else:
+        association = Association(DependencyEdgeAssocaition,filename)
+    return association
 
 if __name__ == '__main__':
     print 'start'
 
     t = time()
 
-    mode = 1
-    mains = {1: main_part1, 2: main_part2 , 3: main_part3}
-    mains[mode](sys.argv[1])
+    part = 3
+    to_test = False
+
+    associator = make_association_to_part(part, sys.argv[1])
+    vector_builder = VectorBuilder(associator)
+    if to_test:
+        associator.test()
+        vector_builder.test_pmi()
+    vector_builder.build_all_vectors()
+    vector_builder.find_similarities(TARGET_WORDS, 'result_part' + str(part) + ".txt")
 
     print 'time: ', time() - t
