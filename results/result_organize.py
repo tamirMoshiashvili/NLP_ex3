@@ -13,19 +13,18 @@ def get_dict_for(filename):
 
 
 if __name__ == '__main__':
-    d1 = get_dict_for('result_part1.txt')
-    d2 = get_dict_for('result_part2.txt')
-    d3 = get_dict_for('result_part3.txt')
-    ds = [d1, d2, d3]
+    d1 = get_dict_for('word2vec_bow5.txt')
+    d2 = get_dict_for('word2vec_deps.txt')
+    ds = [d1, d2]
 
-    output_file = open('most_common_words.csv', 'w')
+    output_file = open('word2vec_most_common.csv', 'w')
     for key in d1:
         # sort lists of each key
         for d in ds:
             d[key].sort()
 
         output_file.write(key + '\n')
-        for a, b, c in zip(d1[key], d2[key], d3[key]):
-            output_file.write(',' + a + ',' + b + ',' + c + '\n')
+        for a, b in zip(d1[key], d2[key]):
+            output_file.write(',' + a + ',' + b + '\n')
 
     output_file.close()
