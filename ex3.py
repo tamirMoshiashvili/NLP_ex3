@@ -28,8 +28,15 @@ if __name__ == '__main__':
     to_test = False
 
     associator = make_association_to_part(part, sys.argv[1])
-    #print 'size:', len(associator.get_structure_pair_counts())
-    #exit(0)
+    f = open('features/features_part' + str(part) + '.txt', 'w')
+    for target_word in TARGET_WORDS:
+        f.write(target_word + ':\n')
+        for feat in associator.get_features_for(associator.get_word_id(target_word)):
+            f.write('\t' + associator.get_word_from_id(feat) + '\n')
+        f.write('\n')
+
+    f.close()
+    exit(0)
     vector_builder = VectorBuilder(associator)
     if to_test:
         associator.test()
