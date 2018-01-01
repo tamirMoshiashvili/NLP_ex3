@@ -24,12 +24,12 @@ if __name__ == '__main__':
     print 'start'
     t = time()
 
-    part = 2
+    part = 3
     to_test = False
 
     associator = make_association_to_part(part, sys.argv[1])
-    print 'size:', len(associator.get_structure_pair_counts())
-    exit(0)
+    #print 'size:', len(associator.get_structure_pair_counts())
+    #exit(0)
     vector_builder = VectorBuilder(associator)
     if to_test:
         associator.test()

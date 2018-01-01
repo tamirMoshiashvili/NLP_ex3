@@ -26,7 +26,7 @@ class DependencyEdgeAssocaition:
                     self._feature_sentence(sentence, context_type, preposition)
                     sentence = []
                 else:
-                    if splitted[4] in all_context_type:  # TODO - check if it ok to cut here.
+                    if splitted[4] in all_context_type:
                         lemma = splitted[2]
                         sentence.append((int(splitted[6]), lemma, splitted[4]))
                     else:
@@ -68,7 +68,7 @@ class DependencyEdgeAssocaition:
                 self.pair_counts[word_id][feature_id] += 1
                 self.targets_count[word_id] += 1
 
-                feature = tup[TAG] + "<" + tup[WORD]
+                feature = tup[WORD] + "<" + tup[TAG]
                 feature_id = self._get_lemma_id(feature)
                 father_id = self._get_lemma_id(father[WORD])
 
@@ -82,7 +82,7 @@ class DependencyEdgeAssocaition:
                 self.pair_counts[word_id][feature_id] += 1
                 self.targets_count[word_id] += 1
 
-                feature = tup[TAG] + "<" + tup[WORD]
+                feature = tup[WORD] + "<" + tup[TAG]
                 for pre in preposition:
                     feature = feature + "<" + pre
                 word_id = self._get_lemma_id(father[WORD])
