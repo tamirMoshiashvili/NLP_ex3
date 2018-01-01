@@ -26,7 +26,7 @@ class DependencyEdgeAssocaition:
                     self._feature_sentence(sentence, context_type, preposition)
                     sentence = []
                 else:
-                    if splitted[4] in all_context_type:
+                    if splitted[4] in all_context_type:  # TODO - check if it ok to cut here.
                         lemma = splitted[2]
                         sentence.append((int(splitted[6]), lemma, splitted[4]))
                     else:
@@ -63,29 +63,29 @@ class DependencyEdgeAssocaition:
                 if not right:
                     continue
 
-                feature = father[TAG] + ">" + father[WORD]
+                feature =  ">" + father[TAG] + "|" + father[WORD]
                 feature_id = self._get_lemma_id(feature)
                 self.pair_counts[word_id][feature_id] += 1
                 self.targets_count[word_id] += 1
 
-                feature = tup[WORD] + "<" + tup[TAG]
+                feature = tup[TAG] + "|" + tup[WORD] + "<"
                 feature_id = self._get_lemma_id(feature)
                 father_id = self._get_lemma_id(father[WORD])
 
                 self.pair_counts[father_id][feature_id] += 1
                 self.targets_count[father_id] += 1
+                if len(prepositions) > 0:
+                    feature = ">" + father[TAG] + "|" + father[WORD]
+                    for pre in prepositions:
+                        feature = ">" + pre + feature
+                    feature_id = self._get_lemma_id(feature)
+                    self.pair_counts[word_id][feature_id] += 1
+                    self.targets_count[word_id] += 1
 
-                feature = father[TAG] + ">" + father[WORD]
-                for pre in prepositions:
-                    feature = pre + ">" + feature
-                feature_id = self._get_lemma_id(feature)
-                self.pair_counts[word_id][feature_id] += 1
-                self.targets_count[word_id] += 1
-
-                feature = tup[WORD] + "<" + tup[TAG]
-                for pre in prepositions:
-                    feature = feature + "<" + pre
-                word_id = self._get_lemma_id(father[WORD])
-                self.targets_count[word_id] += 1
-                feature_id = self._get_lemma_id(feature)
-                self.pair_counts[word_id][feature_id] += 1
+                    feature = tup[TAG] + "|" + tup[WORD] + "<"
+                    for pre in prepositions:
+                        feature = feature + pre + "<"
+                    word_id = self._get_lemma_id(father[WORD])
+                    self.targets_count[word_id] += 1
+                    feature_id = self._get_lemma_id(feature)
+                    self.pair_counts[word_id][feature_id] += 1

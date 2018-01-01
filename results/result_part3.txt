@@ -1,264 +1,264 @@
 car:
-	racing
-	truck
-	bicycle
-	thoroughbred
-	motorcycle
-	vehicle
-	auto
-	carriage
-	driver
-	motor
-	greyhound
-	formula
-	constructor
-	automobile
-	horse
-	race
-	tram
-	fatal
-	traffic
-	high-speed
+	fatal -
+	deadly -
+	auto -
+	drunk -
+	traffic -
+	racing -
+	truck -
+	tragic -
+	skiing -
+	automobile -
+	motorcycle -
+	plane -
+	airplane -
+	amusement -
+	challenger -
+	freak -
+	indoor
+	hunting
+	rally
+	turbo
 
 bus:
-	freight
-	rail
-	ferry
 	commuter
-	tram
-	subway
-	east-west
 	streetcar
-	metro
-	taxi
-	transit
 	telephone
-	long-distance
+	tram
+	rail
+	shipping
 	amtrak
-	pit
-	transatlantic
-	transportation
-	hourly
+	metro
+	trading
+	high-speed
+	shuttle
 	north-south
-	railway
+	east-west
+	postal
+	premium
+	freight
+	feeder
+	suburban
+	mainline
+	passenger
 
 hospital:
-	infirmary
-	sanatorium
-	milford
-	clinic
 	antwerp
-	taunton
-	ward
-	secretariat
-	college
-	library
-	bethesda
-	wellesley
-	council
-	warrington
-	glendale
-	barrington
-	residence
-	airstrip
-	parkland
-	dunedin
+	sanatorium
+	clinic
+	baltimore
+	diagnosis
+	infancy
+	medication
+	age
+	jail
+	custody
+	macarthur
+	captivity
+	lexington
+	evaluation
+	norwich
+	hopkins
+	ravine
+	parkway
+	accident
+	prison
 
 hotel:
 	ballroom
 	casino
-	amenity
-	spacious
-	restaurant
-	condominium
 	supermarket
-	boutique
-	resort
-	chat
-	inn
+	condominium
+	mayo
+	restaurant
+	miranda
+	yacht
+	mina
+	dining
+	adjoin
+	canyon
+	locker
+	savoy
+	dressing
 	plaza
-	ornate
-	palace
+	hilton
+	kabul
 	tavern
 	mahal
-	adjacent
-	cottage
-	seaside
-	adjoin
 
 gun:
-	emplacement
-	cannon
-	pistol
-	armament
-	rifle
-	volley
-	ammunition
-	howitzer
-	weaponry
 	mortar
-	musket
-	carbine
-	anti-aircraft
+	cannon
 	shotgun
-	malfunction
-	caliber
-	battery
 	spear
+	cocktail
+	pistol
+	cruiser
+	rifle
+	rain
 	artillery
-	bombardment
+	gunner
+	ammunition
+	volley
+	lightly
+	sword
+	microscope
+	projectile
+	heavily
+	f1
+	tank
 
 bomb:
-	bombing
 	torpedo
-	u-boat
-	terrorist
-	shell
-	starboard
-	microscopy
-	welding
-	tanker
-	iroquois
-	warhead
 	spectroscopy
-	massive
-	sonic
-	fallout
-	lightning
-	explosion
-	missile
-	prematurely
+	bonding
+	terrorist
+	u-boat
 	accident
+	shell
+	fire
+	katrina
+	massive
+	dane
+	personal
+	earthquake
+	crash
+	eruption
+	orbital
+	atom
+	nucleus
+	lightning
+	chloride
 
 horse:
-	bicycle
 	thoroughbred
-	motorcycle
-	horseback
-	dragoon
-	racehorse
-	speedway
-	cycling
-	sprint
-	filly
-	car
-	endurance
-	greyhound
 	infantry
-	auto
-	downhill
+	dragoon
+	bicycle
+	camel
+	motorcycle
+	armoured
+	parachute
 	motor
-	biking
-	formula
-	bike
+	armored
+	sprint
+	4th
+	cavalry
+	rifle
+	bavarian
+	5th
+	commando
+	25th
+	aviation
+	panzer
 
 fox:
-	nbc
 	cbs
-	cbc
+	nbc
 	abc
-	rtÉ
+	cbc
+	itv
 	pb
 	bbc
-	espn
-	itv
-	coyote
+	hudson
 	cnn
-	bloomberg
-	wb
-	ea
-	wii
 	sky
-	nickelodeon
-	disney
 	sb
-	fledgling
+	espn
+	mtv
+	jersey
+	disney
+	inc
+	coyote
+	broadband
+	murray
+	bristol
 
 table:
-	digestion
 	diagram
-	skiing
-	potassium
-	filtration
-	jumping
-	are
-	ad
-	archery
-	div
-	série
-	pavilion
+	aspiration
 	lawn
-	ladder
-	category
-	plinth
-	harpsichord
-	mountain
-	navbox
+	flavour
+	mt
+	staircase
+	handball
 	italic
+	stair
+	fuselage
+	ladder
+	boiler
+	spire
+	queue
+	picnic
+	inning
+	subtract
+	fence
+	polo
+	hill
 
 bowl:
 	bowler
-	super
-	odi
+	exciting
+	ne
+	gator
+	first-class
+	role-playing
 	all-star
-	xl
-	all-state
-	consecutive
-	nhl
-	pro
+	hornet
+	quiz
+	playoff
+	maple
+	streetcar
+	d'or
+	robinson
 	wrestling
-	divisione
-	overtime
-	league
-	nrl
-	postseason
-	preseason
-	2-1
-	afc
-	nba
-	first-ever
+	multiplayer
+	illustrated
+	mario
+	bros
+	noah
 
 guitar:
-	bass
 	drum
 	keyboard
-	harmonica
+	bass
 	piano
-	vocal
 	saxophone
-	banjo
-	violin
-	mandolin
-	cello
-	flute
-	acoustic
-	percussion
-	accompaniment
-	instrument
+	professionally
+	melody
+	harp
 	guitarist
+	midfield
+	clarinet
+	role
+	banjo
 	trumpet
-	electro
-	sings
+	violin
+	vocal
+	blitz
+	poker
+	backing
+	midfielder
 
 piano:
-	violin
-	cello
-	clarinet
-	oboe
-	viola
-	guitar
-	bass
-	trombone
-	op
 	harp
+	violin
+	clarinet
+	cello
 	saxophone
-	beethoven
-	mandolin
-	drum
-	flute
 	mozart
+	beethoven
+	guitar
 	keyboard
-	harmonica
-	sonata
-	horn
+	bass
+	drum -
+	viola
+	melodic
+	sang -
+	flute
+	strauss -
+	banjo -
+	tenor -
+	professionally -
+	classical -
 
