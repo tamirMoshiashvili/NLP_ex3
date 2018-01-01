@@ -76,14 +76,14 @@ class DependencyEdgeAssocaition:
                 self.targets_count[father_id] += 1
 
                 feature = father[TAG] + ">" + father[WORD]
-                for pre in preposition:
+                for pre in prepositions:
                     feature = pre + ">" + feature
                 feature_id = self._get_lemma_id(feature)
                 self.pair_counts[word_id][feature_id] += 1
                 self.targets_count[word_id] += 1
 
                 feature = tup[WORD] + "<" + tup[TAG]
-                for pre in preposition:
+                for pre in prepositions:
                     feature = feature + "<" + pre
                 word_id = self._get_lemma_id(father[WORD])
                 self.targets_count[word_id] += 1
