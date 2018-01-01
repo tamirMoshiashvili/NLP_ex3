@@ -45,10 +45,9 @@ class DependencyEdgeAssocaition:
 
     def _feature_sentence(self, sentence, context_type, preposition):
         # tree = Node.buildSentenceTree(sentence)
-        for tup in sentence:  # tup == (word, tag, head_id)
+        for tup in sentence:  # tup == (head_id, word, tag)
             if tup[HEAD] > 0 and tup[TAG] not in preposition:  # skip on root and for words that not context_type (==-1)
-                word_id = self._get_lemma_id(WORD)
-
+                word_id = self._get_lemma_id(tup[WORD])
                 father = sentence[tup[HEAD] - 1]
 
                 prepositions = []
@@ -63,15 +62,27 @@ class DependencyEdgeAssocaition:
                         break
                 if not right:
                     continue
-                feature = ">" + father[WORD]
 
-                for pre in preposition:
-                    feature = feature + ">" + pre
+                feature = father[TAG] + ">" + father[WORD]
                 feature_id = self._get_lemma_id(feature)
                 self.pair_counts[word_id][feature_id] += 1
                 self.targets_count[word_id] += 1
 
-                feature = "<" + tup[WORD]
+                feature = tup[TAG] + "<" + tup[WORD]
+                feature_id = self._get_lemma_id(feature)
+                father_id = self._get_lemma_id(father[WORD])
+
+                self.pair_counts[father_id][feature_id] += 1
+                self.targets_count[father_id] += 1
+
+                feature = father[TAG] + ">" + father[WORD]
+                for pre in preposition:
+                    feature = pre + ">" + feature
+                feature_id = self._get_lemma_id(feature)
+                self.pair_counts[word_id][feature_id] += 1
+                self.targets_count[word_id] += 1
+
+                feature = tup[TAG] + "<" + tup[WORD]
                 for pre in preposition:
                     feature = feature + "<" + pre
                 word_id = self._get_lemma_id(father[WORD])

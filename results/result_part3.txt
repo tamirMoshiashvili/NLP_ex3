@@ -1,264 +1,264 @@
 car:
+	lorry
+	fatal
 	racing
-	vehicle
-	driver
-	carriage
-	wagon
+	auto
 	traffic
-	passenger
-	chassis
+	drunk
+	machinery
+	vehicle
+	deadly
 	truck
-	automobile
-	operator
-	boat
-	ferry
+	cyclist
+	canoe
 	motorcycle
-	terminal
-	race
-	diesel
-	cruiser
-	bike
-	motor
+	skiing
+	tragic
+	automobile
+	plane
+	stagecoach
+	airplane
+	amusement
 
 bus:
-	operator
-	taxi
-	ferry
-	passenger
-	vehicle
-	automobile
-	traffic
-	driver
-	tram
-	route
-	terminal
-	service
-	accident
-	transit
+	commuter
+	transatlantic
 	rail
-	yacht
-	station
-	racing
-	hub
-	connect
+	freight
+	tram
+	streetcar
+	telephone
+	amtrak
+	trolleybus
+	high-speed
+	metro
+	east-west
+	passenger
+	shipping
+	hourly
+	ferry
+	subway
+	railway
+	arterial
+	transcontinental
 
 hospital:
-	clinic
-	college
-	campus
-	montgomery
-	library
 	ward
-	school
-	museum
-	patient
-	chapel
-	establishment
-	trustee
-	cambridge
-	governor
-	medical
-	hall
-	hotel
-	headquarters
-	police
-	borough
+	clinic
+	infirmary
+	milford
+	assent
+	diagnosis
+	mateo
+	medication
+	wellesley
+	coliseum
+	greenwich
+	sanatorium
+	disorder
+	hopkins
+	lava
+	wildlife
+	ambulance
+	sandstone
+	goldwater
+	smallpox
 
 hotel:
-	resort
-	mall
-	inn
-	apartment
-	cafe
-	restaurant
-	mansion
-	palace
-	casino
-	building
+	condominium
+	ballroom
+	mahal
 	supermarket
-	synagogue
-	pub
-	hospital
-	chain
-	terrace
-	opera
-	neighbourhood
+	intercontinental
 	plaza
-	attraction
+	casino
+	carousel
+	españa
+	savoy
+	crater
+	guangzhou
+	co-op
+	dorm
+	restaurant
+	fragrance
+	mayo
+	stele
+	centerpiece
+	marque
 
 gun:
-	artillery
-	fire
 	cannon
-	armament
-	battery
-	weapon
+	volley
+	musket
+	mortar
 	rifle
-	grenade
-	arm
-	tank
-	battalion
-	regiment
-	armour
-	bombardment
-	shell
-	brigade
+	anti-aircraft
+	artillery
+	carbine
 	ammunition
-	turret
+	intruder
+	weaponry
+	shot
 	cruiser
-	bullet
+	handgun
+	machine
+	howitzer
+	rocket
+	rain
+	heavy
+	spear
 
 bomb:
-	explosion
-	detonate
 	torpedo
-	submarine
-	bomber
-	shell
-	collide
-	bombing
-	warship
-	aircraft
-	sink
-	intercept
+	warhead
+	spectroscopy
+	u-boat
 	accident
-	airfield
-	carrier
-	fin
-	explode
-	bullet
-	destroy
-	weight
+	refloat
+	terrorist
+	explodes
+	shell
+	capsize
+	ram
+	hominem
+	peroxide
+	massive
+	meteor
+	personal
+	sulfide
+	alight
+	crash
+	arson
 
 horse:
-	elephant
-	dog
-	cyclist
-	deer
-	cat
-	bull
-	bird
-	female
-	goat
-	jockey
-	racing
-	rider
-	sheep
-	mate
-	race
-	terror
-	armament
-	colt
-	background
-	animal
+	thoroughbred
+	bicycle
+	dragoon
+	infantry
+	greyhound
+	motorcycle
+	cycling
+	boar
+	auto
+	speedway
+	mounted
+	fia
+	downhill
+	parachute
+	armoured
+	artillery
+	sprint
+	motor
+	winston
+	grenadier
 
 fox:
-	allen
-	lewis
-	j
-	howard
-	wright
-	fitzgerald
-	robinson
-	stewart
-	h
-	hair
-	robertson
-	james
-	iv
-	g
-	gibson
-	smith
-	mason
-	mitchell
-	elli
-	evans
+	cbs
+	nbc
+	cbc
+	abc
+	sundance
+	gma
+	itv
+	retro
+	disney
+	inverness
+	sb
+	broadcasting
+	quad
+	bbc
+	nickelodeon
+	niro
+	rtÉ
+	cnn
+	paramount
+	laughter
 
 table:
-	top
-	adjustment
-	canon
-	spot
-	temperature
-	entry
-	summarize
-	conjecture
-	reuse
-	pavilion
-	eruption
-	season
-	shelter
-	interval
+	skiing
+	bottom
+	lawn
+	sanitation
+	grill
+	subtract
+	picnic
+	comet
+	inspection
 	flooding
-	system
-	qualify
-	column
-	skilled
-	volume
+	polo
+	eruption
+	audit
+	pyramid
+	handball
+	interval
+	loser
+	lacrosse
+	buffet
+	série
 
 bowl:
 	bowler
-	yellow
-	grove
-	fruit
-	selection
-	triangle
+	xl
+	odi
+	mach
+	xxx
+	matchup
+	right-handed
+	super
+	gator
+	knicks
+	left-handed
+	divisione
+	ne
+	xiii
+	all-star
 	creep
-	ring
-	plantation
-	berth
-	juice
-	mill
-	meadow
-	pepper
-	red
-	victory
-	ball
-	wicket
-	pour
-	apple
+	lynx
+	hornet
+	first-class
+	right-hand
 
 guitar:
-	bass
 	drum
-	piano
-	vocal
+	bass
 	keyboard
-	riff
-	solo
-	violin
-	flute
-	instrument
+	harmonica
+	saxophone
+	piano
+	trombone
+	harp
+	cello
+	banjo
+	snare
 	guitarist
-	sonata
-	trumpet
-	soloist
-	quartet
-	concerto
-	lesson
-	ensemble
+	vocal
+	robb
+	professionally
+	percussion
+	backing
 	melody
-	horn
+	mandolin
+	rhythm
 
 piano:
-	bass
-	guitar
 	violin
-	concerto
-	flute
+	cello
+	harp
+	clarinet
+	beethoven
+	trombone
 	sonata
-	quartet
-	keyboard
-	soloist
-	op
-	solo
-	duo
-	guitarist
+	oboe
+	saxophone
+	viola
+	harpsichord
+	flute
+	guitar
+	mozart
+	chopin
 	drum
-	playing
-	instrument
-	violinist
-	lesson
-	trio
-	trumpet
+	harmonica
+	bass
+	baritone
+	keyboard
 
