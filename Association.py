@@ -2,7 +2,7 @@ from time import time
 from collections import defaultdict
 
 THRESHOLD = 100
-NUM_FEATURES_FOR_WORDS = 20
+NUM_FEATURES_FOR_WORDS = 50
 
 
 class Association:

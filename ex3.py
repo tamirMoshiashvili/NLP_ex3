@@ -20,14 +20,7 @@ def make_association_to_part(part_no, filename):
     return association
 
 
-if __name__ == '__main__':
-    print 'start'
-    t = time()
-
-    part = 3
-    to_test = False
-
-    associator = make_association_to_part(part, sys.argv[1])
+def write_features_to_file(part, associator):
     f = open('./features/features_part' + str(part) + '.txt', 'w')
     for target_word in TARGET_WORDS:
         f.write(target_word + ':\n')
@@ -36,7 +29,17 @@ if __name__ == '__main__':
         f.write('\n')
 
     f.close()
+    exit(0)
 
+
+if __name__ == '__main__':
+    print 'start'
+    t = time()
+
+    part = 3
+    to_test = False
+
+    associator = make_association_to_part(part, sys.argv[1])
     vector_builder = VectorBuilder(associator)
     if to_test:
         associator.test()

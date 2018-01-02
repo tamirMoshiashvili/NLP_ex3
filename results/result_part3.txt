@@ -1,20 +1,20 @@
 car:
-	fatal -
-	deadly -
-	auto -
-	drunk -
-	traffic -
-	racing -
-	truck -
-	tragic -
-	skiing -
-	automobile -
-	motorcycle -
-	plane -
-	airplane -
-	amusement -
-	challenger -
-	freak -
+	fatal
+	deadly
+	auto
+	drunk
+	traffic
+	racing
+	truck
+	tragic
+	skiing
+	automobile
+	motorcycle
+	plane
+	airplane
+	amusement
+	challenger
+	freak
 	indoor
 	hunting
 	rally
@@ -251,14 +251,14 @@ piano:
 	guitar
 	keyboard
 	bass
-	drum -
+	drum
 	viola
 	melodic
-	sang -
+	sang
 	flute
-	strauss -
-	banjo -
-	tenor -
-	professionally -
-	classical -
+	strauss
+	banjo
+	tenor
+	professionally
+	classical
 
