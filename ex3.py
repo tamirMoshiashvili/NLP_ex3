@@ -37,7 +37,7 @@ if __name__ == '__main__':
     t = time()
 
     part = 3
-    to_test = False
+    to_test = True
 
     associator = make_association_to_part(part, sys.argv[1])
     vector_builder = VectorBuilder(associator)
