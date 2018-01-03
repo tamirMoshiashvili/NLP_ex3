@@ -1,0 +1,144 @@
+car:
+	cars
+	vehicle
+	truck
+	motorcar
+	mid-engined
+	suv
+	motorbike
+	automobile
+	minivan
+	pierce-arrow
+
+bus:
+	buses
+	metrobus
+	tram
+	fixed-route
+	minibus
+	busses
+	msrtc
+	apsrtc
+	ksrtc
+	intercity
+
+hospital:
+	lying-in
+	hospitals
+	infirmary
+	clinic
+	hospice
+	siriraj
+	addenbrooke
+	polyclinic
+	dispensary
+	acute-care
+
+hotel:
+	motel
+	sofitel
+	sheraton
+	doubletree
+	kempinski
+	westin
+	hotels
+	ramada
+	restaurant
+	travelodge
+
+gun:
+	sub-machine
+	guns
+	76mm
+	37mm
+	88mm
+	large-caliber
+	quick-firing
+	forward-firing
+	gatling
+	shkas
+
+bomb:
+	bombs
+	detonated
+	booby-trap
+	firebomb
+	car-bomb
+	detonating
+	500-pound
+	detonate
+	detonates
+	tallboy
+
+horse:
+	horses
+	riderless
+	gaited
+	bronc
+	saddlebred
+	standardbred
+	prancing
+	gelding
+	bareback
+	sleipnir
+
+fox:
+	nine-tailed
+	wsvn
+	wofl
+	wjbk
+	cbs
+	wtic
+	wkbd
+	kmsp
+	nbc
+	witi
+
+table:
+	tables
+	look-up
+	foosball
+	sortable
+	left-most
+	wikitables
+	pgn
+	textbox
+	wikitable
+	footers
+
+bowl:
+	tostitos
+	xliii
+	bcs
+	xliv
+	bowls
+	post-season
+	xlvi
+	gator
+	xlii
+	bluebonnet
+
+guitar:
+	saxophone
+	guitars
+	harmonica
+	drums
+	bass
+	mandolin
+	accordion
+	keyboards
+	12-string
+	melodica
+
+piano:
+	violin
+	cello
+	clarinet
+	harpsichord
+	saxophone
+	flute
+	viola
+	trombone
+	pianoforte
+	accordion
+
