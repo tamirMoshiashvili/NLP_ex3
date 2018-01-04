@@ -1,7 +1,7 @@
 horse,bow5 ,deps
 ,bred,adpmod:byI_commute
 ,galloping,amod_gaited
-,horse,appos_pony
+,gelding,appos_pony
 ,horses,compmodI_drovers
 ,racing,compmod_ch-53e
 ,ridden,compmod_poitevin
@@ -12,7 +12,7 @@ horse,bow5 ,deps
 
 bomb,bow5 ,deps
 ,atomic,adpmod:byI_unharmed
-,bomb,adpmod:o:n_pentagon
+,blast,adpmod:on_pentagon
 ,bomber,adpmod:withI_rearmed
 ,bombing,compmodI_fellatio
 ,bombs,compmodI_splashes
@@ -23,8 +23,8 @@ bomb,bow5 ,deps
 ,exploded,rcmod_bursts
 
 car,bow5 ,deps
-,bmw,adpmod:byI_commute
-,car,adpmod:fromI_tossed
+,accident,adpmod:byI_commute
+,bmw,adpmod:fromI_tossed
 ,cars,amod_late-model
 ,dealership,amod_liter
 ,driver,amod_newly-designed
@@ -35,9 +35,9 @@ car,bow5 ,deps
 ,rear-drive,poss_brink
 
 hospital,bow5 ,deps
-,bethlem,adpmod:of_nuova
-,foundling,amod_maximum-security
-,hospital,compmod_armley
+,bellevue,adpmod:of_nuova
+,bethlem,amod_maximum-security
+,foundling,compmod_armley
 ,hospitals,compmod_combermere
 ,infirmary,compmod_desloge
 ,maudsley,compmod_eastview
@@ -48,9 +48,9 @@ hospital,bow5 ,deps
 
 hotel,bow5 ,deps
 ,biltmore,compmod_armley
-,hotel,compmod_dolmabahçe
-,hotels,compmod_hanworth
-,kempinski,compmod_nymphenburg
+,hotels,compmod_dolmabahçe
+,kempinski,compmod_hanworth
+,marriott,compmod_nymphenburg
 ,radisson,compmod_ravenscourt
 ,ramada,compmod_safdarjung
 ,ritz-carlton,compmod_siriraj
@@ -62,8 +62,8 @@ fox,bow5 ,deps
 ,affiliate,amod_crab-eating
 ,cbs,appos_canadensis
 ,cnn,compmodI_subchannels
-,fox,compmod_jacki
-,movietone,conjI_corgan
+,movietone,compmod_jacki
+,msnbc,conjI_corgan
 ,nbc,conjI_leda
 ,news,conjI_raimi
 ,owned-and-operated,conj_bluebird
@@ -73,8 +73,8 @@ fox,bow5 ,deps
 gun,bow5 ,deps
 ,11-inch,adpmod:forI_cartridges
 ,40mm,adpmod:ofI_hilt
-,gatling,adpmod:withI_rearmed
-,gun,compmodI_cwt
+,emplacements,adpmod:withI_rearmed
+,gatling,compmodI_cwt
 ,guns,compmodI_fellatio
 ,howitzer,compmod_karabiner
 ,machine,compmod_m1918
@@ -88,45 +88,57 @@ guitar,bow5 ,deps
 ,bass,adpmod:onI_foster
 ,drums,adpmod:onI_harris
 ,glockenspiel,adpmod:onI_thompson
-,guitar,amod_end-blown
-,guitars,appos_mandolin
-,keyboards,conjI_bongos
-,nyckelharpa,conj_back-up
-,tambourine,dep_keyboard
+,guitars,amod_end-blown
+,keyboards,appos_mandolin
+,nyckelharpa,conjI_bongos
+,tambourine,conj_back-up
+,vocals,dep_keyboard
 
 bus,bow5 ,deps
-,bus,adpmod:byI_commute
-,buses,adpmod:onI_ridership
-,connexxion,amod_east-bound
-,inter-city,compmod_airlink
-,intercity,compmod_operates
-,ksrtc,compmod_xpt
-,msrtc,compmod_yrt
-,samtrans,conj_busses
-,seabus,conj_hovercraft
-,smrt,dobjI_onboard
+,buses,adpmod:byI_commute
+,connexxion,adpmod:onI_ridership
+,inter-city,amod_east-bound
+,intercity,compmod_airlink
+,ksrtc,compmod_operates
+,msrtc,compmod_xpt
+,samtrans,compmod_yrt
+,seabus,conj_busses
+,smrt,conj_hovercraft
+,transit,dobjI_onboard
 
 table,bow5 ,deps
 ,billiard,adpmod:belowI_added
 ,billiards,adpmod:inI_rows
-,cello,adpmod:intoI_face
-,concerto,adpmod:offI_knocks
-,concertos,adpmod:onI_seventh
-,foosball,adpmod:throughI_throw
-,harpsichord,amod_25-metre
-,lookup,amod_ten-foot
-,op,compmod_abydos
-,periodic,compmod_three-judge
+,foosball,adpmod:intoI_face
+,look-up,adpmod:offI_knocks
+,lookup,adpmod:onI_seventh
+,periodic,adpmod:throughI_throw
+,sortable,amod_25-metre
+,tables,amod_ten-foot
+,tennis,compmod_abydos
+,toc,compmod_three-judge
+
+piano,bow5 ,deps
+,cello,adpmod:forI_adagio
+,concerto,adpmod:ofI_virtuoso
+,concertos,adpmod:onI_harris
+,harpsichord,adpmod:onI_supplemented
+,op,adpmod:onI_thompson
+,sonata,amod_end-blown
+,sonatas,compmod_kreutzer
+,viola,compmod_vomeronasal
+,violin,conjI_bongos
+,violoncello,conj_back-up
 
 bowl,bow5 ,deps
-,bowl,adpmod:against_auburn
-,bowls,adpmod:against_oklahoma
-,super,adpmod:atI_clinched
-,xli,adpmod:forI_stadiums
-,xlii,adpmod:inI_2-1
-,xliii,adpmod:intoI_win
-,xliv,amod_25-metre
-,xlv,compmod_pan-pacific
-,xlvi,conjI_preseason
+,bowls,adpmod:against_auburn
+,super,adpmod:against_oklahoma
+,xli,adpmod:atI_clinched
+,xlii,adpmod:forI_stadiums
+,xliii,adpmod:inI_2-1
+,xliv,adpmod:intoI_win
+,xlv,amod_25-metre
+,xlvi,compmod_pan-pacific
+,xxxix,conjI_preseason
 ,xxxviii,conj_play-offs
 

@@ -1,4 +1,5 @@
 horse=
+	gelding
 	bred
 	galloping
 	ridden
@@ -8,9 +9,9 @@ horse=
 	thoroughbred
 	standardbred
 	horses
-	horse
 
 bomb=
+	blast
 	bombing
 	bomber
 	detonating
@@ -20,9 +21,9 @@ bomb=
 	detonates
 	detonated
 	bombs
-	bomb
 
 car=
+	accident
 	rear-drive
 	parked
 	dealership
@@ -32,9 +33,9 @@ car=
 	bmw
 	mygale
 	racing
-	car
 
 hospital=
+	bellevue
 	westmead
 	maudsley
 	siriraj
@@ -44,9 +45,9 @@ hospital=
 	psychiatric
 	moorfields
 	bethlem
-	hospital
 
 hotel=
+	marriott
 	sheraton
 	ritz-carlton
 	biltmore
@@ -56,9 +57,9 @@ hotel=
 	radisson
 	westin
 	hotels
-	hotel
 
 fox=
+	msnbc
 	cnn
 	affiliate
 	terrier
@@ -68,9 +69,9 @@ fox=
 	movietone
 	news
 	vulpes
-	fox
 
 gun=
+	emplacements
 	11-inch
 	40mm
 	rifle
@@ -80,9 +81,9 @@ gun=
 	machine
 	submachine
 	guns
-	gun
 
 guitar=
+	vocals
 	banjo
 	tambourine
 	6-string
@@ -92,9 +93,9 @@ guitar=
 	drums
 	guitars
 	bass
-	guitar
 
 bus=
+	transit
 	msrtc
 	intercity
 	inter-city
@@ -104,9 +105,9 @@ bus=
 	samtrans
 	ksrtc
 	buses
-	bus
 
 table=
+	look-up
 	toc
 	billiard
 	periodic
@@ -116,9 +117,9 @@ table=
 	tennis
 	tables
 	sortable
-	table
 
-piano:
+piano=
+	sonatas
 	violoncello
 	viola
 	concertos
@@ -128,9 +129,9 @@ piano:
 	cello
 	sonata
 	violin
-	piano
 
 bowl=
+	xxxix
 	super
 	xlv
 	xlvi
@@ -140,5 +141,4 @@ bowl=
 	xliv
 	bowls
 	xli
-	bowl
 

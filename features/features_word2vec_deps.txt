@@ -31,7 +31,7 @@ bomb=
 	adpmod:withI_rearmed
 	adpmod:byI_unharmed
 	compmodI_splashes
-	adpmod:o:n_pentagon
+	adpmod:on_pentagon
 	num_88mm
 
 car=
@@ -141,3 +141,4 @@ piano=
 	conjI_bongos
 	amod_end-blown
 	adpmod:forI_adagio
+
