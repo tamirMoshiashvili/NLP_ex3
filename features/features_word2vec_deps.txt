@@ -1,0 +1,143 @@
+horse=
+	compmod_poitevin
+	appos_pony
+	compmod_ch-53e
+	poss_quixote
+	rcmod_roams
+	adpmod:byI_commute
+	dobjI_shoe
+	compmodI_drovers
+	nsubjpassI_spooked
+	amod_gaited
+
+fox=
+	conj_nolte
+	conj_bluebird
+	conjI_leda
+	conjI_corgan
+	conjI_raimi
+	compmod_jacki
+	conj_mattel
+	compmodI_subchannels
+	appos_canadensis
+	amod_crab-eating
+
+bomb=
+	rcmod_bursts
+	compmodI_fellatio
+	compmod_phishing
+	compmod_m1918
+	compmod_single-car
+	adpmod:withI_rearmed
+	adpmod:byI_unharmed
+	compmodI_splashes
+	adpmod:o:n_pentagon
+	num_88mm
+
+car=
+	compmod_high-wing
+	adpmod:fromI_tossed
+	compmod_m1918
+	poss_brink
+	amod_late-model
+	amod_liter
+	amod_newly-designed
+	conj_hovercraft
+	amod_street-legal
+	adpmod:byI_commute
+
+hospital=
+	compmod_desloge
+	compmod_eastview
+	compmod_fresnes
+	compmod_combermere
+	compmod_armley
+	amod_maximum-security
+	compmod_strangeways
+	adpmod:of_nuova
+	compmod_safdarjung
+	compmod_siriraj
+
+hotel=
+	compmod_armley
+	compmod_safdarjung
+	compmod_strangeways
+	compmod_siriraj
+	compmod_hanworth
+	compmod_ravenscourt
+	conj_guesthouses
+	compmod_whitwell
+	compmod_dolmabahçe
+	compmod_nymphenburg
+
+bowl=
+	amod_25-metre
+	adpmod:intoI_win
+	adpmod:atI_clinched
+	adpmod:forI_stadiums
+	compmod_pan-pacific
+	conj_play-offs
+	adpmod:inI_2-1
+	adpmod:against_oklahoma
+	conjI_preseason
+	adpmod:against_auburn
+
+gun=
+	compmodI_cwt
+	adpmod:forI_cartridges
+	compmod_t-55
+	compmod_karabiner
+	adpmod:ofI_hilt
+	num_60mm
+	compmodI_fellatio
+	compmod_m1918
+	adpmod:withI_rearmed
+	num_88mm
+
+guitar=
+	adpmod:onI_foster
+	adpmod:ofI_virtuoso
+	dep_keyboard
+	appos_mandolin
+	adpmod:onI_thompson
+	adpmod:forI_adagio
+	adpmod:onI_harris
+	conj_back-up
+	amod_end-blown
+	conjI_bongos
+
+bus=
+	dobjI_onboard
+	compmod_yrt
+	compmod_xpt
+	conj_busses
+	compmod_operates
+	compmod_airlink
+	adpmod:onI_ridership
+	conj_hovercraft
+	amod_east-bound
+	adpmod:byI_commute
+
+table=
+	compmod_three-judge
+	adpmod:throughI_throw
+	adpmod:belowI_added
+	adpmod:intoI_face
+	amod_25-metre
+	compmod_abydos
+	amod_ten-foot
+	adpmod:onI_seventh
+	adpmod:offI_knocks
+	adpmod:inI_rows
+
+piano=
+	adpmod:onI_supplemented
+	compmod_vomeronasal
+	compmod_kreutzer
+	conj_back-up
+	adpmod:onI_thompson
+	adpmod:ofI_virtuoso
+	adpmod:onI_harris
+	conjI_bongos
+	amod_end-blown
+	adpmod:forI_adagio

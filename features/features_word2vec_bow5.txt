@@ -1,0 +1,144 @@
+horse=
+	bred
+	galloping
+	ridden
+	racing
+	riding
+	trotting
+	thoroughbred
+	standardbred
+	horses
+	horse
+
+bomb=
+	bombing
+	bomber
+	detonating
+	exploded
+	atomic
+	detonate
+	detonates
+	detonated
+	bombs
+	bomb
+
+car=
+	rear-drive
+	parked
+	dealership
+	cars
+	motor
+	driver
+	bmw
+	mygale
+	racing
+	car
+
+hospital=
+	westmead
+	maudsley
+	siriraj
+	foundling
+	infirmary
+	hospitals
+	psychiatric
+	moorfields
+	bethlem
+	hospital
+
+hotel=
+	sheraton
+	ritz-carlton
+	biltmore
+	ramada
+	sofitel
+	kempinski
+	radisson
+	westin
+	hotels
+	hotel
+
+fox=
+	cnn
+	affiliate
+	terrier
+	cbs
+	nbc
+	owned-and-operated
+	movietone
+	news
+	vulpes
+	fox
+
+gun=
+	11-inch
+	40mm
+	rifle
+	howitzer
+	sub-machine
+	gatling
+	machine
+	submachine
+	guns
+	gun
+
+guitar=
+	banjo
+	tambourine
+	6-string
+	glockenspiel
+	nyckelharpa
+	keyboards
+	drums
+	guitars
+	bass
+	guitar
+
+bus=
+	msrtc
+	intercity
+	inter-city
+	connexxion
+	smrt
+	seabus
+	samtrans
+	ksrtc
+	buses
+	bus
+
+table=
+	toc
+	billiard
+	periodic
+	foosball
+	billiards
+	lookup
+	tennis
+	tables
+	sortable
+	table
+
+piano:
+	violoncello
+	viola
+	concertos
+	harpsichord
+	op
+	concerto
+	cello
+	sonata
+	violin
+	piano
+
+bowl=
+	super
+	xlv
+	xlvi
+	xlii
+	xliii
+	xxxviii
+	xliv
+	bowls
+	xli
+	bowl
+
